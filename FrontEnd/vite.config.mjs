@@ -15,6 +15,6 @@ export default ({ mode }) =>
       },
       host: true,
       strictPort: true,
-      port: 80
+      port: 3000
     }
   });
