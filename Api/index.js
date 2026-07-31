@@ -13,9 +13,7 @@ if (process.env.ENV === 'dev' && fs.existsSync(path.resolve(__dirname, '.env.dev
 
 const app = require('./app');
 
-// Replace MongoDB connection with mock database
-const { connectDB } = require('./db/mockDatabase');
-connectDB();
+require('./db/connect');
 
 app.listen(process.env.PORT || 4000, () => {
   console.log(`Server running on port ${process.env.PORT || 4000}`);

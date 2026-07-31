@@ -1,1 +1,79 @@
-/* SILENCE IS GOLD */
+.app-shell {
+  background:
+    radial-gradient(circle at top left, rgba(22, 119, 255, 0.12), transparent 28rem),
+    linear-gradient(135deg, #f6f8fb 0%, #ffffff 46%, #f3faf6 100%);
+}
+
+.expense-page {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 32px 20px 44px;
+}
+
+.expense-hero {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.expense-hero h1 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.05;
+  margin: 8px 0;
+}
+
+.expense-eyebrow {
+  color: #0958d9;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.expense-stats {
+  margin-bottom: 18px;
+}
+
+.expense-stat-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(5, 5, 5, 0.06);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+  padding: 18px 20px;
+}
+
+.expense-table-section {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(5, 5, 5, 0.06);
+  border-radius: 8px;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+  padding: 16px;
+}
+
+.expense-toolbar {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+  .expense-page {
+    padding: 20px 12px 32px;
+  }
+
+  .expense-hero,
+  .expense-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .expense-toolbar .ant-input-search {
+    width: 100% !important;
+  }
+}
