@@ -78,4 +78,5 @@ $RECYCLE.BIN/
 
 /node_modules
 /coverage
+/.mongodb-binaries
 .migrate

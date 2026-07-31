@@ -1,5 +1,9 @@
 /* eslint-disable no-console */
+const path = require('path');
 const mongoose = require('mongoose');
+
+process.env.MONGOMS_DOWNLOAD_DIR = process.env.MONGOMS_DOWNLOAD_DIR || path.resolve(__dirname, '../.mongodb-binaries');
+
 const { MongoMemoryServer } = require('mongodb-memory-server');
 const config = require('./config');
 
@@ -22,7 +26,7 @@ const connect = async () => {
 const close = async () => {
   try {
     await mongoose.disconnect();
-    await global.__MONGOINSTANCE.stop();
+    if (global.__MONGOINSTANCE) await global.__MONGOINSTANCE.stop();
   } catch (err) {
     console.error(err);
   }
